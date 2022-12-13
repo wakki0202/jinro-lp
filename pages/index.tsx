@@ -3,7 +3,15 @@ import type { NextPage } from 'next'
 const Home: NextPage = () => {
   return (
     <div>
-      人狼コロシアム
+      <header></header>
+      <section id='mv'></section>
+      <section id='news'></section>
+      <section id='about'></section>
+      <section id='rule'></section>
+      <section id='set'></section>
+      <section id='character'></section>
+      <section id='contact'></section>
+      <footer>copyright©️2021jinrocolosseum</footer>
     </div>
   )
 }
