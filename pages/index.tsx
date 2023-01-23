@@ -2,20 +2,23 @@ import type { NextPage } from "next";
 import React from "react";
 import { useState } from "react";
 import { FaYoutube, FaInstagram, FaTwitter } from "react-icons/fa";
+import { Splide, SplideSlide } from "@splidejs/react-splide";
+import "@splidejs/splide/css";
 
 const Home: NextPage = () => {
   const [showModal, setShowModal] = React.useState(false);
-  const [showModal2, setShowModal2] = React.useState(false);
 
   return (
     <div className="bg-black text-white">
       <header>
-        <div className="flex">
+        <div className="flex py-8">
           <div id="logo-box" className="w-3/12">
-            <div id="ロゴ">ロゴ</div>
+            <div id="ロゴ" className="ml-16">
+              ロゴ
+            </div>
           </div>
           <div id="header-content-box" className="w-9/12">
-            <ul className="flex gap-3">
+            <ul className="flex gap-10 justify-end mr-16">
               <li>ABOUT</li>
               <li>RULE</li>
               <li>SET</li>
@@ -27,11 +30,51 @@ const Home: NextPage = () => {
         </div>
       </header>
       <section id="mv">
-        <div className="">
+        <div className="my-40">
           <img src="/jinro-mv-img.png" alt="" className="block m-auto" />
         </div>
       </section>
-      <section id="news"></section>
+      <section id="news-section" className="pt-20">
+        <div id="about-title">
+          <h3 className="border w-fit m-auto text-3xl px-36 py-3">NEWS</h3>
+
+          <div className="mt-20">
+            <Splide
+              aria-label="私のお気に入りの画像集"
+              options={{
+                rewind: true,
+                perPage: 3,
+              }}
+            >
+              <SplideSlide>
+                <div id="news" className="border border-white text-center">
+                  ニュース1
+                </div>
+              </SplideSlide>
+              <SplideSlide>
+                <div id="news" className="border border-white text-center">
+                  ニュース2
+                </div>
+              </SplideSlide>
+              <SplideSlide>
+                <div id="news" className="border border-white text-center">
+                  ニュース3
+                </div>
+              </SplideSlide>
+              <SplideSlide>
+                <div id="news" className="border border-white text-center">
+                  ニュース4
+                </div>
+              </SplideSlide>
+              <SplideSlide>
+                <div id="news" className="border border-white text-center">
+                  ニュース5
+                </div>
+              </SplideSlide>
+            </Splide>
+          </div>
+        </div>
+      </section>
       <section id="about" className="py-40 bg-black">
         <div className="bg-gray-900 w-10/12 m-auto py-20">
           <div id="about-title">
@@ -355,18 +398,90 @@ const Home: NextPage = () => {
         </div>
       </section>
 
-      <section id="set" className="py-20">
+      <section id="set-section" className="py-20">
         <div id="set-title">
           <h3 className="border w-fit m-auto px-36 py-3 text-3xl">SET</h3>
         </div>
-      </section>
-      <section id="character" className="py-20">
-        <div id="character-title">
-          <h3 className="border w-fit m-auto px-36 py-3 text-3xl">CHARACTER</h3>
+
+        <div className="mt-20">
+          <Splide
+            aria-label="私のお気に入りの画像集"
+            options={{
+              rewind: true,
+              perPage: 1,
+            }}
+          >
+            <SplideSlide>
+              <div id="set" className="border border-white text-center">
+                セット1
+              </div>
+            </SplideSlide>
+            <SplideSlide>
+              <div id="set" className="border border-white text-center">
+                セット2
+              </div>
+            </SplideSlide>
+            <SplideSlide>
+              <div id="set" className="border border-white text-center">
+                セット3
+              </div>
+            </SplideSlide>
+            <SplideSlide>
+              <div id="set" className="border border-white text-center">
+                セット4
+              </div>
+            </SplideSlide>
+            <SplideSlide>
+              <div id="set" className="border border-white text-center">
+                セット5
+              </div>
+            </SplideSlide>
+          </Splide>
         </div>
       </section>
 
-      <section id="contact" className="py-20">
+      <section id="character-section" className="pt-40">
+        <div id="character-title">
+          <h3 className="border w-fit m-auto px-36 py-3 text-3xl">CHARACTER</h3>
+        </div>
+        <div className="mt-20">
+          <Splide
+            aria-label="私のお気に入りの画像集"
+            options={{
+              rewind: true,
+              perPage: 1,
+            }}
+          >
+            <SplideSlide>
+              <div id="character" className="border border-white text-center">
+                キャラクター1
+              </div>
+            </SplideSlide>
+            <SplideSlide>
+              <div id="character" className="border border-white text-center">
+                キャラクター2
+              </div>
+            </SplideSlide>
+            <SplideSlide>
+              <div id="character" className="border border-white text-center">
+                キャラクター3
+              </div>
+            </SplideSlide>
+            <SplideSlide>
+              <div id="character" className="border border-white text-center">
+                キャラクター4
+              </div>
+            </SplideSlide>
+            <SplideSlide>
+              <div id="character" className="border border-white text-center">
+                キャラクター5
+              </div>
+            </SplideSlide>
+          </Splide>
+        </div>
+      </section>
+
+      <section id="contact" className="py-60">
         <div id="contact-title">
           <h3 className="border w-fit m-auto px-36 py-3 text-3xl">CONTACT</h3>
         </div>
