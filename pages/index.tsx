@@ -9,7 +9,7 @@ const Home: NextPage = () => {
   const [showModal, setShowModal] = React.useState(false);
 
   return (
-    <div className="bg-black text-white">
+    <div className="text-white">
       <header>
         <div className="flex py-8">
           <div id="logo-box" className="w-3/12">
@@ -31,7 +31,7 @@ const Home: NextPage = () => {
       </header>
       <section id="mv">
         <div className="my-40">
-          <img src="/jinro-mv-img.png" alt="" className="block m-auto" />
+          <h1 className="text-center text-7xl"><span className="text-lg">人狼を見つけてはいけない</span><br />UN人狼</h1>
         </div>
       </section>
       <section id="news-section" className="pt-20">
@@ -48,35 +48,49 @@ const Home: NextPage = () => {
             >
               <SplideSlide>
                 <div id="news" className="border border-white text-center">
-                  ニュース1
+                  <p>ニュース1</p>
+                  <div className="py-20">コンテンツ</div>
+                  <a href="">もっと見る</a>
                 </div>
               </SplideSlide>
               <SplideSlide>
                 <div id="news" className="border border-white text-center">
-                  ニュース2
+                  <p>ニュース2</p>
+                  <div className="py-20">コンテンツ</div>
+                  <a href="">もっと見る</a>
                 </div>
               </SplideSlide>
               <SplideSlide>
                 <div id="news" className="border border-white text-center">
-                  ニュース3
+                  <p>ニュース3</p>
+                  <div className="py-20">コンテンツ</div>
+                  <a href="">もっと見る</a>
                 </div>
               </SplideSlide>
               <SplideSlide>
                 <div id="news" className="border border-white text-center">
-                  ニュース4
+                  <p>ニュース4</p>
+                  <div className="py-20">コンテンツ</div>
+                  <a href="">もっと見る</a>
                 </div>
               </SplideSlide>
               <SplideSlide>
                 <div id="news" className="border border-white text-center">
-                  ニュース5
+                  <p>ニュース5</p>
+                  <div className="py-20">コンテンツ</div>
+                  <a href="">もっと見る</a>
                 </div>
               </SplideSlide>
             </Splide>
           </div>
         </div>
       </section>
-      <section id="about" className="py-40 bg-black">
-        <div className="bg-gray-900 w-10/12 m-auto py-20">
+      <section id="about" className="py-40">
+        {/* <div className="container2">
+          <div className="panel-1">カード</div>
+          <div className="panel-2"></div>
+        </div> */}
+        <div className="bg-black w-10/12 m-auto my-20">
           <div id="about-title">
             <h3 className="border w-fit m-auto text-3xl px-36 py-3">ABOUT</h3>
           </div>
@@ -165,7 +179,7 @@ const Home: NextPage = () => {
 
           <div className="w-4/12 m-auto">
             <button
-              className="w-full hover:bg-[#0F3E6C] hover:text-white duration-200 font-bold text-right"
+              className="w-full  hover:text-white duration-200 font-bold text-right"
               onClick={() => setShowModal(true)}
               type="button"
             >
@@ -226,7 +240,7 @@ const Home: NextPage = () => {
 
           <div className="w-4/12">
             <button
-              className="w-full hover:bg-[#0F3E6C] hover:text-white duration-200 font-bold text-right"
+              className="w-full  hover:text-white duration-200 font-bold text-right"
               onClick={() => setShowModal(true)}
               type="button"
             >
@@ -287,7 +301,7 @@ const Home: NextPage = () => {
 
           <div className="w-4/12">
             <button
-              className="w-full hover:bg-[#0F3E6C] hover:text-white duration-200 font-bold text-right"
+              className="w-full  hover:text-white duration-200 font-bold text-right"
               onClick={() => setShowModal(true)}
               type="button"
             >
@@ -348,7 +362,7 @@ const Home: NextPage = () => {
 
           <div className="w-4/12">
             <button
-              className="w-full hover:bg-[#0F3E6C] hover:text-white duration-200 font-bold text-right"
+              className="w-full  hover:text-white duration-200 font-bold text-right"
               onClick={() => setShowModal(true)}
               type="button"
             >
@@ -505,6 +519,11 @@ const Home: NextPage = () => {
           </div>
         </div>
       </section>
+
+      {/* <div className="container2">
+        <div className="panel-1">カード</div>
+        <div className="panel-2"></div>
+      </div> */}
 
       <footer className="text-center py-1 border-t border-white">
         copyright©️2021jinrocolosseum
